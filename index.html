@@ -109,7 +109,7 @@ chat='true'>
 <div class="form-card">
   <h2>Contact Details</h2>
 
-  <form>
+  <form id="contactForm">
     <div class="form-group">
       <label for="name">Full Name</label>
       <input type="text" id="name" placeholder="Enter your name"/>
@@ -143,6 +143,28 @@ chat='true'>
     </div>
   </form>
 </div>
+<!-- <script>
+  function identify_call() {
+    var new_contact = {
+      "First name": document.getElementById("name").value,
+      "Email": document.getElementById("email").value,
+      "Mobile": document.getElementById("phone").value
+    };
+
+    var identifier = document.getElementById("email").value;
+
+    // Call Freshworks CRM identify (assuming fwcrm is loaded)
+    fwcrm.identify(identifier, new_contact);
+
+    console.log("ran script");
+  }
+
+  // Attach submit handler
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // stop page refresh
+    identify_call();    // call your function
+  });
+</script> -->
 
 </body>
 </html>
